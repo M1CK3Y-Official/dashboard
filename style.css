@@ -1,0 +1,30 @@
+:root {
+ 
+    --header-bg-color: #AB2121;
+    --nav-bg-color: #7A0000;
+
+
+    --side-panel-bg-color: linear-gradient(135deg, rgba(80,5,5,1) 0%, rgba(122,3,3,1) 100%);
+    --side-panel-menu-color: #8A0000;
+
+    /* filter: var(--side-panel-shadow); */
+    --side-panel-shadow: drop-shadow(8px 0px 25px #000000);
+
+    --gallery-bg-color: linear-gradient(135deg, rgba(93,0,0,1) 0%, rgba(94,48,48,1) 100%);
+    --gallery-card-color: linear-gradient(45deg, rgba(138,0,0,1) 0%, rgba(142,63,63,1) 100%);
+
+    /* filter: var(--gallery-card-shadow); */
+    --gallery-card-shadow: drop-shadow(0px 3px 6px #00000016);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgb(93, 0, 0);
+    color: white;
+}
