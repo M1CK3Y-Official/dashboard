@@ -1,0 +1,31 @@
+.sidebar {
+    background-image: var(--side-panel-bg-color);
+    height: 82.5vh;
+    width: 20vw;
+    filter: var(--side-panel-shadow);
+}
+
+.portfolios {
+    padding: 0 25px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio {
+    list-style-type: none;
+    text-decoration: none;
+    background-color: var(--side-panel-menu-color);
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 10px;
+    font-size: 2rem;
+    font-weight: 500;
+    filter: var(--side-panel-menu-shadow);
+    transition: all 0.3s ease-in-out;
+}
+.link {
+    text-decoration: none;
+    color: inherit;
+}

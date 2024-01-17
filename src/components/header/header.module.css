@@ -1,0 +1,77 @@
+.bars {
+    font-size: 5rem;
+    transition: all 0.25s ease;
+}
+.bars:hover {
+    cursor: pointer;
+    filter: brightness(0.8);
+}
+
+.header {
+    height: 10vh;
+    width: 100%;
+    /* background-color: var(--header-bg-color); */
+    z-index: 100;
+    position: relative;    
+    filter: drop-shadow(var(--header-shadow));
+    transition: all 0.35s ease;
+}
+.header.open {
+    height: 17.5vh;
+}
+
+.headerContainer {
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    background-color: var(--header-bg-color);
+    align-items: center;
+    padding: 0 25px;
+    z-index: 1010;
+    position: relative;
+    box-shadow: var(--header-shadow);
+    
+}
+
+.logo {
+    font-size: 5rem;
+    font-weight: 300;
+}
+
+.dropdown {
+    background-color: var(--nav-bg-color);
+    height: 7.5vh;
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -10vh;
+    transition: top 0.35s ease;
+}
+.dropdown.open {
+    top: 0vh;
+}
+
+.menus {
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    gap: 25px;
+}
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu {
+    background-color: var(--header-bg-color);
+    padding: 0.2em 1em;
+    border-radius: 10px;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+
+
+

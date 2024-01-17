@@ -1,41 +1,39 @@
 :root {
 
-  /* Global Variables */
-  --main-color: lightblue;
+    --header-bg-color: #AB2121;
+    --nav-bg-color: #7A0000;
+    --header-shadow: 0px 3px 25px rgba(0, 0, 0, 0.25);
 
-  /* Component Specific Variables */
-  --box-color: #fff;
 
-  /* Navigation */
-  --navigation-background-color: rgb(0, 0, 0);
-  --navigation-logo-background-color: rgb(255, 255, 255);
-  --navigation-color: rgb(255, 255, 255);
+    --side-panel-bg-color: linear-gradient(135deg, rgba(80,5,5,1) 0%, rgba(122,3,3,1) 100%);
+    --side-panel-menu-color: #8A0000;
+
+    /* filter: var(--side-panel-shadow); */
+    --side-panel-shadow: drop-shadow(8px 0px 25px rgba(0, 0, 0, 0.25));
+    --side-panel-menu-shadow: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.25));
+
+    --gallery-bg-color: linear-gradient(135deg, rgba(93,0,0,1) 0%, rgba(94,48,48,1) 100%);
+    --gallery-card-color: linear-gradient(45deg, rgba(138,0,0,1) 0%, rgba(142,63,63,1) 100%);
+
+    /* filter: var(--gallery-card-shadow); */
+    --gallery-card-shadow: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.25));
+
+
+    --main-color: rgb(93, 0, 0);
 }
 
 
-@media (prefers-color-scheme: dark) {
 
-  :root {
-    
-    /* Global Variables */
-    --main-color: #333;
-
-
-    /* Component Specific Variables */
-    --box-color: rgb(235, 235, 160);
-
-    /* Navigation */
-    --navigation-background-color: rgb(235, 235, 160);
-    --navigation-logo-background-color: rgb(255, 255, 255);
-    --navigation-color: rgb(0, 0, 0);
-  }
-
-}
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+html {
+  font-size: 0.625rem;
+  scroll-behavior: smooth;
 }
 
 html,
@@ -46,6 +44,9 @@ body {
 
 body {
   background-color: var(--main-color);
+  color: white;
+  overflow-x: hidden;
+  font-size: 1.6rem;
 }
 
 a {

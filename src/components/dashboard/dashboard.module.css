@@ -1,0 +1,24 @@
+.dashboard {
+    width: 80vw;
+    height: 82.5vh;
+}
+
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    padding: 50px;
+    height: 100%;
+}
+
+.galleryItem {
+    background: var(--gallery-card-color);
+    height: calc(27.5vh - 50px);
+    border-radius: 10px;
+    filter : var(--gallery-card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
