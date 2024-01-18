@@ -8,16 +8,17 @@
 }
 
 .header {
-    height: 10vh;
+    /* height: 10vh; */
+    height: 17.5vh;
     width: 100%;
-    /* background-color: var(--header-bg-color); */
     z-index: 100;
     position: relative;    
     filter: drop-shadow(var(--header-shadow));
     transition: all 0.35s ease;
 }
 .header.open {
-    height: 17.5vh;
+    /* height: 17.5vh; */
+    height: 10vh;
 }
 
 .headerContainer {
@@ -46,11 +47,11 @@
     display: flex;
     align-items: center;
     position: relative;
-    top: -10vh;
+    top: 0vh;
     transition: top 0.35s ease;
 }
 .dropdown.open {
-    top: 0vh;
+    top: -10vh;
 }
 
 .menus {

@@ -1,14 +1,19 @@
-import BoilerBox from '@/components/boilerplate/boilerbox'
 import styles from './page.module.css'
 import Sidebar from '@/components/sidebar/sidebar'
-import Dashboard from '@/components/dashboard/dashboard'
+import Gallery from '@/components/gallery/gallery'
+import { fetchAuthorsByGalleryName, fetchImagesForAuthor } from '@/lib/data.service';
 
-export default async function Page() {
+export default async function Page({searchParams}) {
+
+  let imagesForAuthor = await fetchImagesForAuthor(searchParams.author);
+
+
+let authorsFromGallery = await fetchAuthorsByGalleryName(searchParams.gallery);
 
   return (
     <main className={styles.page} >
-      <Sidebar />
-      <Dashboard />
+      <Sidebar authors={authorsFromGallery} />
+      <Gallery gallery={imagesForAuthor} />
     </main>
   )
 }

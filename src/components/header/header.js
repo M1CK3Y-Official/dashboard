@@ -5,7 +5,8 @@ import Link from 'next/link';
 import { FaBars } from "react-icons/fa";
 
 
-const Header = () => {
+
+const Header = ({galleries}) => {
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -23,8 +24,10 @@ const Header = () => {
 
             <div className={`${styles.dropdown} ${isOpen ? styles.open : ''}`}>
                 <ul className={styles.menus}>
-                    <Link href="#" className={styles.link}><li className={styles.menu}>Obscura</li></Link>
-                    <Link href="#" className={styles.link}><li className={styles.menu}>Umbra</li></Link>
+                    {galleries.map( (gallery) => 
+                        <Link href={`?gallery=${gallery.name}`} key={gallery._id} className={styles.link}><li className={styles.menu}>{gallery.name}</li></Link> 
+                    )}
+                    
                 </ul>
             </div>
 

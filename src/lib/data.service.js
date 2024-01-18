@@ -152,8 +152,8 @@ export const fetchImagesForAuthor = async (author) => {
     Get all images for gallery
 
 */
-export const getPortfolioMenuData = async () => {
+// export const getPortfolioMenuData = async () => {
 
 
 
-}
+// }
