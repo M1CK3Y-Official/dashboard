@@ -152,21 +152,8 @@ export const fetchImagesForAuthor = async (author) => {
     Get all images for gallery
 
 */
-export const fetchImagesForGallery = async (name) => {
+export const getPortfolioMenuData = async () => {
 
-    console.log('fetchImagesForGallery', name)
 
-    try {
 
-        await dbConnect();
-        let result = await imageModel.find({"gallery" :  { $regex:name, $options: 'i' } });
-    
-        return JSON.parse(JSON.stringify(result))
-
-    } catch (error) {
-
-        console.log(error)
-
-    }
-
-};
+}
