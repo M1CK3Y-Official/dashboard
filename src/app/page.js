@@ -1,3 +1,4 @@
+
 import styles from './page.module.css'
 import Sidebar from '@/components/sidebar/sidebar'
 import Gallery from '@/components/gallery/gallery'
@@ -5,15 +6,14 @@ import { fetchAuthorsByGalleryName, fetchImagesForAuthor } from '@/lib/data.serv
 
 export default async function Page({searchParams}) {
 
-  let imagesForAuthor = await fetchImagesForAuthor(searchParams.author);
+  let author = await fetchImagesForAuthor(searchParams.author);
 
-
-let authorsFromGallery = await fetchAuthorsByGalleryName(searchParams.gallery);
+  let authorsFromGallery = await fetchAuthorsByGalleryName(searchParams.gallery);
 
   return (
     <main className={styles.page} >
       <Sidebar authors={authorsFromGallery} />
-      <Gallery gallery={imagesForAuthor} />
+      {author ? <Gallery author={author} /> : ''}
     </main>
   )
 }

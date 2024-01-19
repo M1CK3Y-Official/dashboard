@@ -1,21 +1,29 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './header.module.css';
 import Link from 'next/link';
 import { FaBars } from "react-icons/fa";
-
+import { useRouter } from 'next/navigation';
 
 
 const Header = ({galleries}) => {
 
     const [isOpen, setIsOpen] = useState(false);
+    const router = useRouter();
+    
+    useEffect(() => {
+
+      router.push(`?gallery=${galleries[0].name}`); 
+
+    });
+
 
     return (
         <header className={`${styles.header} ${isOpen ? styles.open : ''}`}>
             <div className={styles.headerContainer}>
 
                 <div className={styles.logoContainer}>
-                    <h1 className={styles.logo}>Dashboard</h1>
+                    <Link className={styles.link} href={'/'}><h1 className={styles.logo}>Dashboard</h1></Link>
                 </div>
                 
                 <FaBars className={styles.bars} onClick={ () => setIsOpen(!isOpen)} />
