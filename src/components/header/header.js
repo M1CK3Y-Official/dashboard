@@ -11,11 +11,11 @@ const Header = ({galleries}) => {
     const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
     
-    useEffect(() => {
+    // useEffect(() => {
 
-      router.replace(`?gallery=${galleries[0].name}`); 
+    //   router.replace(`?gallery=${galleries[0].name}`); 
 
-    });
+    // });
 
 
     return (

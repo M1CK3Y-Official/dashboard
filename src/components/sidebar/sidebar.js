@@ -8,14 +8,14 @@ const Sidebar = ({authors}) => {
 
     const router = useRouter();
     
-    useEffect(() => {
+    // useEffect(() => {
         
-        console.log(authors)
-        if (authors.length > 0) {
-            router.replace(`?gallery=${authors[0].gallery}&author=${authors[0].author}`); 
-        }
+    //     console.log(authors)
+    //     if (authors.length > 0) {
+    //         router.replace(`?gallery=${authors[0].gallery}&author=${authors[0].author}`); 
+    //     }
 
-    });
+    // });
 
     return (
         <aside className={styles.sidebar}>

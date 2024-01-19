@@ -1,6 +1,6 @@
 .sidebar {
     background-image: var(--side-panel-bg-color);
-    height: 82.5vh;
+    min-height: 82.5vh;
     width: 20vw;
     filter: var(--side-panel-shadow);
 }
