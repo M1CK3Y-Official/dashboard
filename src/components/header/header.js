@@ -13,7 +13,7 @@ const Header = ({galleries}) => {
     
     useEffect(() => {
 
-      router.push(`?gallery=${galleries[0].name}`); 
+      router.replace(`?gallery=${galleries[0].name}`); 
 
     });
 

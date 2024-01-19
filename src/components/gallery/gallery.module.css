@@ -16,6 +16,8 @@
 .galleryItem {
     background: var(--gallery-card-color);
     height: calc(27.5vh - 50px);
+    /* width: auto; */
+    /* aspect-ratio: 1; */
     border-radius: 10px;
     filter : var(--gallery-card-shadow);
     display: flex;
