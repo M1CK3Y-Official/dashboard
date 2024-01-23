@@ -10,22 +10,12 @@ const Gallery = async ({author}) => {
         <section className={styles.galleryContainer}>
             <div className={styles.gallery}>
 
-
                 {author.map( (image, index) => {
                     return <div className={styles.galleryItem} key={index}>
                         <Image className={styles.image} src={`/galleries${image.path}`} alt={image.name} width={image.width} height={image.height} />
                     </div>
                 })}
 
-                
-                {/* <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div>
-                <div className={styles.galleryItem}>Image</div> */}
             </div>
         </section>
     )
