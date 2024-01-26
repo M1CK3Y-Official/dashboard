@@ -14,6 +14,7 @@ export default async function Page({searchParams}) {
     <main className={styles.page} >
       <Sidebar authors={authorsFromGallery} />
       {author ? <Gallery author={author} /> : ''}
+      
     </main>
   )
 }

@@ -1,6 +1,8 @@
 import styles from './gallery.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import DevSwiper from '@/components/devSwiper/devSwiper';
+
 
 const Gallery = async ({author}) => {
 
@@ -10,11 +12,15 @@ const Gallery = async ({author}) => {
         <section className={styles.galleryContainer}>
             <div className={styles.gallery}>
 
-                {author.map( (image, index) => {
+                <DevSwiper author={author} />
+
+                
+
+                {/* {author.map( (image, index) => {
                     return <div className={styles.galleryItem} key={index}>
                         <Image className={styles.image} src={`/galleries${image.path}`} alt={image.name} width={image.width} height={image.height} />
                     </div>
-                })}
+                })} */}
 
             </div>
         </section>

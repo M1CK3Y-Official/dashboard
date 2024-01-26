@@ -5,13 +5,21 @@
 
 
 .gallery {
+    /* display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px; */
+    padding: 50px;
+    height: 100%;
+}
+/* .gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 20px;
     column-gap: 20px;
     padding: 50px;
     height: 100%;
-}
+} */
 
 .galleryItem {
     background: var(--gallery-card-color);
