@@ -10,21 +10,35 @@
 
 .slider {
     width: 100%;
-    
+    position: relative;
     height: 100%;
+    border: 5px solid var(--header-bg-color);
 }
 
 .image {
     width: 100%;
-    /* height: auto; */
-    border: 5px solid var(--header-bg-color);
-    object-fit: cover;
+    height: 700px;
+    /* object-fit: cover; */
+    background-position: center;
+    background-size: cover;
+    display: block;
 }
 
-.swiper-button-prev  {
-    color: var(--header-bg-color);
+.arrowContainer {
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1em;
+    align-items: center;
 }
 
 
-
+.arrow {
+    color: red;
+    font-size: 5rem;
+    cursor: pointer;
+}
 
