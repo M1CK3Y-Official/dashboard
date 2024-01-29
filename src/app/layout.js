@@ -18,7 +18,7 @@ export default async function RootLayout({ children }) {
       <body className={poppinsFont.className}>
         <Header galleries={galleries}></Header>
         {children}
-        <Footer></Footer>
+        {/* <Footer></Footer> */}
       </body>
     </html>
   )

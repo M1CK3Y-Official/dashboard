@@ -14,7 +14,7 @@ const DevSwiper = ({author}) => {
 
     const swiperRef = useRef(null);
 
-    // Register swiper
+      // Register swiper
     useEffect(() => {
         console.log('swiper registered')
         register();
@@ -40,14 +40,6 @@ const DevSwiper = ({author}) => {
     }
 
 
- 
-
-    
-
-    
-    
-  
-
     return (
         <div className={styles.slider}>
 
@@ -56,7 +48,7 @@ const DevSwiper = ({author}) => {
                 <FaChevronRight className={styles.arrow} onClick={() => slideNext()}></FaChevronRight>
             </div>
 
-            <swiper-container style={{ height: '100%' }}  pagination="true"  autoplay-delay="5000" rewind="true" effect="coverflow"  loop="true" slides-per-view="auto" keyboard="true" speed="500" ref={swiperRef}>
+            <swiper-container style={{ height: '100%' }}  autoplay-delay="5000" rewind="true"  loop="true"  slides-per-view="2" keyboard="true" speed="500" space-between="25" ref={swiperRef}>
                 {author.map( (image) => {
                     return <swiper-slide key={image._id} className={styles.slide}> 
                         <Image className={styles.image} src={`/galleries${image.path}`} alt={image.name} width={image.width} height={image.height} />
